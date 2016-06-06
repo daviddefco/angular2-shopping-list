@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {
+    "bootstrap-switch": "registry:dt/bootstrap-switch#0.0.0+20160317120654",
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236"
+  }
+}

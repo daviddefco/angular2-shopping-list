@@ -2,7 +2,7 @@
 <html>
 <head>
     <base href="/">
-    <title>Angular 2 Boilerplate</title>
+    <title>Angular 2 Puzzle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Load libraries -->
     <!-- IE required polyfills, in this exact order -->
@@ -15,9 +15,14 @@
     <script src="node_modules/angular2/bundles/angular2.js"></script>
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <script src="node_modules/angular2/bundles/http.js"></script>
-
-
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+    
     <link rel="stylesheet" href="src/css/app.css">
+    <!-- Font Awesome: remove if not needed -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
 <my-app>Loading...</my-app>
@@ -32,7 +37,7 @@
         }
     });
     System.import('app/boot')
-            .then(null, console.error.bind(console));
+            .then(null, console.error.bind(console));        
 </script>
 </body>
 </html>
