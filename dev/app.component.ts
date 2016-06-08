@@ -1,16 +1,31 @@
 import {Component} from 'angular2/core';
+import {FormBuilder, ControlGroup, Validators} from 'angular2/common'
 
-import {SetupComponent} from './puzzle/setup.component'
-import {PuzzleComponent} from './puzzle/puzzle.component'
+import { SubmitComponent } from './submit.component'
+import { ConfirmationComponent } from './confirmation.component'
+
+import { PersonalData } from './personalData'
 
 @Component({
     selector: 'my-app',
     template: `
-        <setup (nameChange)="puzzle.changePlayerName($event.userName)"></setup>
-        <puzzle #puzzle></puzzle>
+        <div class="container">
+            <my-submit  
+            class="col-md-6"
+            [confirmed-data]="confirmedData"
+            (submitData)="submittedData=$event">
+            </my-submit>
+            <my-confirmation 
+            class="col-md-6"
+            [submitted-data]="submittedData"
+            (confirmData)="confirmedData=$event">
+            </my-confirmation>
+        </div>
     `,
-    directives: [ SetupComponent, PuzzleComponent ]
+    directives: [ SubmitComponent, ConfirmationComponent ]
 })
 
 export class AppComponent {
+    submittedData = new PersonalData()
+    confirmedData = new PersonalData()
 }
