@@ -1,4 +1,4 @@
-export class ListItem {
+export interface ListItem {
    item: string
    quantity: number
 }
