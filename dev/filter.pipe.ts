@@ -8,7 +8,7 @@ import { ListItem } from './listItem'
 
 export class FilterPipe implements PipeTransform {
    transform(list: ListItem[], args: string[]): any {
-      if(list.length == 0) {
+      if(list.length == 0 || args[0].length == 0) {
          return list
       } 
 
